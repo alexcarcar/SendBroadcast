@@ -20,6 +20,7 @@ class MainActivity : AppCompatActivity() {
     private fun configureReceiver() {
         val filter = IntentFilter()
         filter.addAction("alex.carcar.sendbroadcast")
+        filter.addAction("android.intent.action.ACTION_POWER_DISCONNECTED")
         receiver = MyReceiver()
         registerReceiver(receiver, filter)
     }

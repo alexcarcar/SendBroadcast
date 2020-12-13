@@ -8,7 +8,7 @@ import android.widget.Toast
 class MyReceiver : BroadcastReceiver() {
 
     override fun onReceive(context: Context, intent: Intent) {
-        // This method is called when the BroadcastReceiver is receiving an Intent broadcast.
-        Toast.makeText(context, "Broadcast intent detected.", Toast.LENGTH_LONG).show()
+        val message = "Broadcast intent detected " + intent.action
+        Toast.makeText(context, message, Toast.LENGTH_LONG).show()
     }
 }
